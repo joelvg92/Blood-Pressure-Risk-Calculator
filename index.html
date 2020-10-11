@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="./lib/css/styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body class="bg-info text-primary">
+  <nav class="navbar navbar-default navbar-custom">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <h1 class="text-center">Blood Pressure Risk Calculator</h1>
+  <div class="container bg-info text-primary">
+    <div class="row">
+      <div class="col-sm-4">
+        <h3>Patient Name:</h3>
+        <h4 id="patient_name"></h3>
+      </div>
+      <div class="col-sm-4">
+        <h3>Gender:</h3>
+        <h4 id="gender"></h3>
+      </div>
+      <div class="col-sm-4">
+        <h3>Date of Birth:</h3>
+        <h4 id="dob"></h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+      <form class="border-class">
+        <div class="form-group">
+        <h3 class="text-center">Enter details to calculate risk of having blood pressure:</h3>
+        </div>
+        <div class="form-group col-md-10">
+          <h4>Click the populate button if you want to populate data from your health records or please enter all the information manually:</h4>
+        </div>
+        <div class="form-group col-md-2">
+          <button type="button" class="btn btn-primary border-class" id="populate">Populate data</button>
+        </div>
+        <div class="form-group col-md-6">
+          <label>Enter Age:</label>
+          <input type="text" class="form-control" id="age" placeholder="Age should be >= 45">
+        </div>
+        <div class="form-group col-md-6">
+          <label>Enter gender:</label>
+          <input type="text" class="form-control" id="gender2" placeholder="male or female">
+        </div>
+        <div class="form-group col-md-6">
+          <label>Enter Weight In Pounds:</label>
+          <input type="text" class="form-control" id="weight" placeholder="180">
+        </div>
+        <div class="form-group col-md-6">
+          <label>Enter Height In Centimeteres:</label>
+          <input type="text" class="form-control" id="height" placeholder="180">
+        </div>
+        <div class="form-group col-md-6">
+          <label>Enter Systolic blood pressure (SBP) (mmHg)</label>
+          <input type="text" class="form-control" id="sys" placeholder="SBP should be between 70 and 139">
+        </div>
+        <div class="form-group col-md-6">
+          <label>Enter Diastolic blood pressure (DBP) (mmHg)</label>
+          <input type="text" class="form-control" id="dia" placeholder="DBP should be between 49 and 80">
+        </div>
+        <div class="form-group col-md-3">
+          <input class="form-check-input" type="checkbox" value="" id="excercise">
+          <label class="form-check-label" for="defaultCheck1">
+            Do you Excercise?
+          </label>
+        </div>
+        <div class="form-group col-md-3">
+          <input class="form-check-input" type="checkbox" value="" id="smdr">
+          <label class="form-check-label" for="defaultCheck2">
+            Do you Smoke/Drink?
+          </label>
+        </div>
+        <div class="form-group col-md-3">
+          <input class="form-check-input" type="checkbox" value="" id="familyhistory">
+          <label class="form-check-label" for="defaultCheck3">
+            Family history of hypertension?
+          </label>
+        </div>
+        <div class="form-group col-md-3">
+          <input class="form-check-input" type="checkbox" value="" id="diabetes">
+          <label class="form-check-label" for="defaultCheck1">
+            Do you have diabetes?
+          </label>
+        </div>
+        <div>
+        <button type="submit" class="btn btn-default">Submit</button>
+        </div>
+      </form>
+      </div>
+    </div>
+  </div>
+
+  <script src='./lib/js/fhir-client.js'></script>
+<!--   <script src="./lib/js/get-data.js"></script> -->
+
+  <!-- uncomment below script and comment above script to switch for easy local testing -->
+<script src="./lib/js/get-data-test.js"></script>
+</body>
+
+</html>

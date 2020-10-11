@@ -1,0 +1,24 @@
+.border-class
+{
+  border:thin black solid;
+  margin:20px;
+  padding:20px;
+}
+.nav.navbar-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  @media (min-width: 768px) {
+    .navbar-nav {
+      float: none;
+    }
+  }
+  .navbar-custom { 
+    background-color: DodgerBlue; 
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: darkblue; /*Change active text color here*/
+}
