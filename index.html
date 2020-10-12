@@ -34,6 +34,7 @@
         </div>
         <div class="form-group col-md-10">
           <h4>Click the populate button if you want to populate data from your health records or please enter all the information manually:</h4>
+          <h3 id="errorMessage" class="bg-danger text-center"></h3>
         </div>
         <div class="form-group col-md-2">
           <button type="button" class="btn btn-primary border-class" id="populate">Populate data</button>
@@ -43,8 +44,11 @@
           <input type="text" class="form-control" id="age" placeholder="Age should be >= 45">
         </div>
         <div class="form-group col-md-6">
-          <label>Enter gender:</label>
-          <input type="text" class="form-control" id="gender2" placeholder="male or female">
+          <label for="gender2">Select gender</label>
+          <select class="form-control" id="gender2">
+            <option>male</option>
+            <option>female</option>
+          </select>
         </div>
         <div class="form-group col-md-6">
           <label>Enter Weight In Pounds:</label>
@@ -66,36 +70,36 @@
           <h5>
             Do you Excercise?
           </h5>
-          <input class="form-check-input" type="checkbox" value="" placeholder="Yes" id="excercise_yes" >
+          <input class="form-check-input" type="checkbox" value="" name="1" placeholder="Yes" id="excercise_yes" onClick="ckChange1(this)" >
           <label for="excercise_yes"> Yes</label><br>
-          <input class="form-check-input" type="checkbox" value="" id="excercise_no" >
+          <input class="form-check-input" type="checkbox" value="" name="1" id="excercise_no" onClick="ckChange1(this)">
           <label for="excercise_no"> No</label><br>
         </div>
         <div class="form-group col-md-3">
           <h5>
             Do you Smoke?
           </h5>
-          <input class="form-check-input" type="checkbox" value="" placeholder="Yes" id="smoke_yes" >
+          <input class="form-check-input" type="checkbox" value="" name="2"placeholder="Yes" id="smoke_yes"  onClick="ckChange2(this)">
           <label for="smoke_yes"> Yes</label><br>
-          <input class="form-check-input" type="checkbox" value="" id="smoke_no" >
+          <input class="form-check-input" type="checkbox" value="" name="2"id="smoke_no" onClick="ckChange2(this)">
           <label for="smoke_no"> No</label><br>
         </div>
         <div class="form-group col-md-3">
           <h5>
-            Family history of hypertension??
+            Family history of hypertension?
           </h5>
-          <input class="form-check-input" type="checkbox" value="" placeholder="Yes" id="history_yes" >
+          <input class="form-check-input" type="checkbox" value="" name="3"placeholder="Yes" id="history_yes" onClick="ckChange3(this)">
           <label for="history_yes"> Yes</label><br>
-          <input class="form-check-input" type="checkbox" value="" id="history_no" >
+          <input class="form-check-input" type="checkbox" value="" name="3"id="history_no" onClick="ckChange3(this)">
           <label for="history_no"> No</label><br>
         </div>
         <div class="form-group col-md-3">
           <h5>
             Do you have diabetes?
           </h5>
-          <input class="form-check-input" type="checkbox" value="" placeholder="Yes" id="diabetes_yes" >
+          <input class="form-check-input" type="checkbox" value="" name="4" placeholder="Yes" id="diabetes_yes" onClick="ckChange4(this)">
           <label for="diabetes_yes"> Yes</label><br>
-          <input class="form-check-input" type="checkbox" value="" id="diabetes_no" >
+          <input class="form-check-input" type="checkbox" value="" name="4"id="diabetes_no" onClick="ckChange4(this)">
           <label for="diabetes_no"> No</label><br>
         </div>
         <div>
