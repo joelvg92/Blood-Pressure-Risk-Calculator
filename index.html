@@ -10,7 +10,7 @@
 </head>
 
 <body class="bg-info text-primary">
-  <h1 class="text-center">Blood Pressure Risk Calculator</h1>
+  <h1 class="text-center">Hypertension Risk Calculator</h1>
   <div class="container bg-info text-primary">
     <div class="row">
       <div class="col-sm-4">
@@ -33,11 +33,11 @@
         <h3 class="text-center">Enter details to calculate risk of having blood pressure:</h3>
         <h5 class="text-center">**Note all fields are required field**</h5>
         </div>
-        <div class="form-group col-md-10">
+        <div class="form-group col-md-12">
           <h4>Click the populate button if you want to populate data from your health records or please enter all the information manually:</h4>
-        </div>
-        <div class="form-group col-md-2">
-          <button type="button" class="btn btn-primary border-class" id="populate">Populate data</button>
+          <div class="form-group col-md-2">
+            <button type="button" class="btn btn-primary border-class" id="populate">Populate data</button>
+          </div>
         </div>
         <div class="form-group col-md-6">
           <label>Enter Age:</label>
@@ -103,7 +103,7 @@
           <label for="diabetes_no"> No</label><br>
         </div>
         <div>
-        <button type="submit" id="calculate" class="btn btn-default">Submit</button>
+        <button type="button" id="calculate" class="btn btn-default">Submit</button>
         </div>
       </form>
       </div>
@@ -132,7 +132,7 @@
           <tbody id="result">
           </tbody>
         </table>     
-        <canvas id="bar-chart" width="200" height="200"></canvas>
+        <canvas id="bar-chart" width="800" height="450"></canvas>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -144,7 +144,7 @@
 <!--   <script src="./lib/js/get-data.js"></script> -->
 
   <!-- uncomment below script and comment above script to switch for easy local testing -->
-<script src="./lib/js/get-data-test-v2.js"></script>
+<script src="./lib/js/get-data-test.js"></script>
 </body>
 
 </html>
